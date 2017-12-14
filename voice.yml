@@ -12,33 +12,55 @@ resources:
     uri: https://github.com/joxar/voice.git
     branch: master
 
-- name: line-notify
-  type: http-api
-  source:
-    uri: https://notify-api.line.me/api/notify
-    method: POST
-    headers:
-      Authorization: "Bearer {access_token}"
-    form_data:
-      message: "{message}"
-    access_token: JVU6OPrXs78N5Fl5m9Py7U70VkmDttmbShTpenlDaoF
+#- name: line-notify
+#  type: http-api
+#  source:
+#    uri: https://notify-api.line.me/api/notify
+#    method: POST
+#    headers:
+#      Authorization: "Bearer {access_token}"
+#    form_data:
+#      message: "{message}"
+#    access_token: JVU6OPrXs78N5Fl5m9Py7U70VkmDttmbShTpenlDaoF
 
-- name: app-develop
-  type: cf
-  source:
-    api: https://api.run.pivotal.io
-    username: mfpirlo@yahoo.co.jp
-    password: B@1ceroNa
-    organization: Pcfkin
-    space: development
+#- name: app-develop
+#  type: cf
+#  source:
+#    api: https://api.run.pivotal.io
+#    username: mfpirlo@yahoo.co.jp
+#    password: B@1ceroNa
+#    organization: Pcfkin
+#    space: development
 
-- name: app-prod
-  type: cf
-  source:
-    api: https://api.run.pivotal.io
-    username: mfpirlo@yahoo.co.jp
-    password: B@1ceroNa
-    organization: Pcfkin
-    space: production
+#- name: app-prod
+#  type: cf
+#  source:
+#    api: https://api.run.pivotal.io
+#    username: mfpirlo@yahoo.co.jp
+#    password: B@1ceroNa
+#    organization: Pcfkin
+#    space: production
 
 #########################################3
+
+jobs:
+
+#####
+- name: DEPLOY
+  plan:
+  - get: src-voice
+    trigger: true
+  - task: run
+    file: src-voice/build.yml
+
+#  - put: app-develop
+#    params:
+#      manifest: src-voice/manifest.yml
+#  - put: app-prod
+#    params:
+#      manifest: src-voice/manifest.yml
+
+#  on_success:
+#    put: line-notify
+#    params:
+#      message: "[R2-D2]voice deployed!"
