@@ -1,8 +1,8 @@
-resource_types:
-- name: http-api
-  type: docker-image
-  source:
-    repository: aequitas/http-api-resource
+#resource_types:
+#- name: http-api
+#  type: docker-image
+#  source:
+#    repository: aequitas/http-api-resource
 
 #####
 resources:
