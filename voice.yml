@@ -43,15 +43,6 @@ resources:
 
 #########################################3
 
-jobs:
-
-#####
-- name: DEPLOY
-  plan:
-  - get: src-voice
-    trigger: true
-  - task: run
-    file: src-voice/build.yml
 
 #  - put: app-develop
 #    params:
