@@ -42,25 +42,3 @@ resources:
     space: production
 
 #########################################3
-
-jobs:
-
-#####
-- name: DEPLOY
-  plan:
-  - get: src-voice
-    trigger: true
-  - task: run
-    file: src-voice/build.yml
-
-  - put: app-develop
-    params:
-      manifest: src-voice/manifest.yml
-  - put: app-prod
-    params:
-      manifest: src-voice/manifest.yml
-
-  on_success:
-    put: line-notify
-    params:
-      message: "[R2-D2]voice deployed!"
