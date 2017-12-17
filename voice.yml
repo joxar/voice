@@ -12,16 +12,16 @@ resources:
     uri: https://github.com/joxar/voice.git
     branch: master
 
-#- name: line-notify
-#  type: http-api
-#  source:
-#    uri: https://notify-api.line.me/api/notify
-#    method: POST
-#    headers:
-#      Authorization: "Bearer {access_token}"
-#    form_data:
-#      message: "{message}"
-#    access_token: JVU6OPrXs78N5Fl5m9Py7U70VkmDttmbShTpenlDaoF
+- name: line-notify
+  type: http-api
+  source:
+    uri: https://notify-api.line.me/api/notify
+    method: POST
+    headers:
+      Authorization: "Bearer {access_token}"
+    form_data:
+      message: "{message}"
+    access_token: JVU6OPrXs78N5Fl5m9Py7U70VkmDttmbShTpenlDaoF
 
 - name: app-develop
   type: cf
