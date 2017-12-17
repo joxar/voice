@@ -51,7 +51,6 @@ jobs:
     trigger: true
   - task: run
     file: src-voice/build.yml
-
   - put: app-develop
     params:
       manifest: src-voice/manifest.yml
