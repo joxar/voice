@@ -1,8 +1,8 @@
-#resource_types:
-#- name: http-api
-#  type: docker-image
-#  source:
-#    repository: aequitas/http-api-resource
+resource_types:
+- name: http-api
+  type: docker-image
+  source:
+    repository: aequitas/http-api-resource
 
 #####
 resources:
@@ -54,6 +54,11 @@ jobs:
   - put: app-develop
     params:
       manifest: src-voice/manifest.yml
+  on_success:
+    put: line-notify
+    params:
+      message: "[R2-D2]voice deployed!"
+
 
 #  - put: app-prod
 #    params:
