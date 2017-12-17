@@ -21,7 +21,7 @@ resources:
       Authorization: "Bearer {access_token}"
     form_data:
       message: "{message}"
-    access_token: JVU6OPrXs78N5Fl5m9Py7U70VkmDttmbShTpenlDaoF
+    access_token: aDIMEqk7iMUTHGPNxfCzV6MXsWMDjb0btINjnhSmUbq
 
 - name: app-develop
   type: cf
