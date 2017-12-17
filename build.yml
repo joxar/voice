@@ -6,4 +6,4 @@ image_resource:
 inputs:
   - name: src-voice
 run:
-  path: src-voice/build.sh
+  path: ls

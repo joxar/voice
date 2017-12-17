@@ -4,7 +4,8 @@
   "description": "npm install simplayer",
   "main": "voice.js",
   "dependencies": {
-    "simplayer": "0.0.8"
+    "simplayer": "0.0.8",
+    "yaml": "^0.3.0"
   },
   "devDependencies": {},
   "scripts": {

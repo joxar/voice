@@ -1,0 +1,6 @@
+#-*- coding: utf-8 -*-
+# yamlを利用するための宣言
+import yaml;
+
+# MyYaml.ymlファイルを読み込み(パース)後、結果を標準出力。
+print yaml.load(open('MyYaml.yml').read())
