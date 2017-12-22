@@ -11,4 +11,4 @@ inputs:
 - name: src-voice
 
 run:
-  path: src-voice/build
+  path: ./src-voice/build
