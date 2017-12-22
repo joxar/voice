@@ -4,7 +4,7 @@ set -e -x
 
 echo "=== build.sh ==="
 export VOICE_HOME=`pwd`
-chmod +x *
+cd src-voice
 npm install
 npm run
 node voice.js Hello
