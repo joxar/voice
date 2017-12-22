@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e -x
+
 echo "=== build.sh ==="
 export VOICE_HOME=`pwd`
 
