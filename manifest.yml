@@ -1,4 +1,4 @@
-name: voice
+name: voice-pkg
 memory: 128M
 random-route: true
 path: .
