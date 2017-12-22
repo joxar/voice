@@ -7,8 +7,8 @@ function main() {
   console.log(mp3);
   var musicProcess = simplayer(mp3, function(error) {
     if (error) throw error;
-    console.log('end of song!');
   });
 }
 
-main();
+//main();
+process.exit(0)

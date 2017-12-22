@@ -10,5 +10,5 @@ function main() {
   });
 }
 
-//main();
+main();
 process.exit(0)
