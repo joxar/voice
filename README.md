@@ -1,5 +1,6 @@
 # voice
 ## prepare
+sudo apt-get install npm
 npm install simplayer
 
 ## usage
