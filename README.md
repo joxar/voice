@@ -1,7 +1,11 @@
 # voice
 ## prepare
+### node
 sudo apt-get install npm
 npm install simplayer
+
+### python
+sudo apt-get install mpg321
 
 ## usage
 ### node
